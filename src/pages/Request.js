@@ -44,33 +44,33 @@ function Request() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
-          <a className="navbar-brand mx-3 ">UEMS</a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <a className="navbar-brand mx-3 fs-2 mb-1">UEMS</a>
+          <button class="navbar-toggler" 
+           type="button" 
+           data-toggle="collapse" 
+           data-target="#navbarSupportedContent" 
+           aria-controls="navbarSupportedContent"
+           aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2">
               <li className="nav-item">
-              <Link className="nav-link fs-5" to="/clubhead" style={{ color: "white" }}>
+              <Link className="nav-link fs-5 btn" to="/clubhead" style={{ color: "white" }}>
                 Status <span className="sr-only"></span>
               </Link>
               </li> 
               <li className="nav-item">
-              <Link className="nav-link fs-5" to="/register" style={{ color: "white" }}>
+              <Link className="nav-link fs-5 btn" to="/register" style={{ color: "white" }}>
                 Register <span className="sr-only"></span>
               </Link>
               </li> 
               
             </ul>
-            <i class="bi bi-person-circle mx-1 fs-3">{localStorage.getItem('role')}</i> 
+            <i className="bi bi-person-circle mx-1 fs-3" style={{ fontWeight: 'bold', fontFamily: 'sans-serif', transform: 'none', fontStyle: 'normal', textAlign: 'left' }}>
+  {localStorage.getItem("role")}
+</i>
             <button
               type="button"
               class="btn bg-white text-success mx-1"

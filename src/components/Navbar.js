@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from '../Axios'
 import Swal from 'sweetalert2'
-export default function Navbar() {
+export default function Navbar({ scrollToClubCard, scrollToFooter }) {
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
     const navigate =useNavigate()
@@ -94,32 +94,30 @@ export default function Navbar() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container-fluid">
-          <a className="navbar-brand mx-3 ">UEMS</a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <a className=" navbar-brand fs-2 mx-3  mb-1">UEMS</a>
+          <button class="navbar-toggler" 
+           type="button" 
+           data-toggle="collapse" 
+           data-target="#navbarSupportedContent" 
+           aria-controls="navbarSupportedContent"
+           aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2">
-              <li className="nav-item">
+              <li className="nav-item btn">
                 <a className="nav-link active fs-5" aria-current="page">
                   Home
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link active fs-5" aria-current="page">
+              <li className="nav-item btn">
+                <a className="nav-link active fs-5" onClick={scrollToClubCard}  aria-current="page">
                   About Us
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link active fs-5" aria-current="page">
+              <li className="nav-item btn">
+                <a className="nav-link active fs-5" onClick={scrollToFooter} aria-current="page">
                   Contact Us
                 </a>
               </li>
