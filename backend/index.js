@@ -11,6 +11,7 @@ mongoDB()
 app.use(cors({
     origin: '*'
   }));
+const allowedOrigins = ['https://uems-mern.vercel.app/'];
 app.use('/api', require("./routes/login"));
 app.use('/api', require("./routes/request"));
 app.use('/api', require("./routes/FetchEvents"));
