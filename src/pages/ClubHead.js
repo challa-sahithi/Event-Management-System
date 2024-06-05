@@ -31,7 +31,7 @@ export default function ClubHead() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2">
               <li className="nav-item">
-              <Link className="nav-link fs-5 btn" to="/" style={{ color: "white" }}>
+              <Link className="nav-link fs-5 btn" to="/status" style={{ color: "white" }}>
                 Status <span className="sr-only"></span>
               </Link>
               </li> 
